@@ -23,14 +23,14 @@ resource "aws_security_group" "project-iac-sg" {
     from_port   = 22
     protocol    = "tcp"
     to_port     = 22
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["10.0.0.0/32"]
   }
   // To Allow Port 80 Transport
   ingress {
     from_port   = 80
     protocol    = ""
     to_port     = 80
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["10.0.0.0/32"]
   }
   egress {
     from_port   = 0
